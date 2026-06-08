@@ -26,7 +26,7 @@ const projects = [
       { label: 'Live Site', url: 'https://news-portal-etom.onrender.com/', type: 'live' },
     ],
     github: 'https://github.com/FarukBadsha0186/news_portal_with_admin',
-    websiteImage: '<img src="/public/client_front.png" alt="NewsHub Website Preview" width="100%" style="border-radius: 12px;" />',
+    websiteImage: '<img src="/client_front.png" alt="NewsHub Website Preview" width="100%" style="border-radius: 12px;" />',
     color: 'from-blue-600 to-cyan-800',
 },
   {

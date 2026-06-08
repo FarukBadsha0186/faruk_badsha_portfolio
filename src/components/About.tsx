@@ -15,7 +15,7 @@ export default function About() {
           <div className="relative">
             <div className="w-90 h-80 rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/20 ring-2 ring-brand-500/30">
   <img 
-    src="/public/faruk_badsha.png"
+    src="/faruk_badsha.png"
     alt="Faruk Badsha"
     className="w-full h-full object-cover"
   />
