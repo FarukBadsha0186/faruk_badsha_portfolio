@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Code2 } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
