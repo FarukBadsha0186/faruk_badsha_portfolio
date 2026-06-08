@@ -1,4 +1,4 @@
-import { Code2, Heart } from 'lucide-react';
+import {  Heart } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
