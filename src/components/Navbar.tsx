@@ -16,7 +16,7 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
+export default function Navbar({  }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -65,8 +65,9 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           </div>
 
           {/* Actions */}
+          
           <div className="flex items-center gap-2">
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all duration-200"
               aria-label="Toggle theme"
@@ -80,7 +81,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
               aria-label="Toggle menu"
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

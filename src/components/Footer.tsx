@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-4">
-            {['#hero', '#skills', '#projects', '#qa', '#contact'].map((href) => (
+            {/* {['#hero', '#skills', '#projects', '#qa', '#contact'].map((href) => (
               <button
                 key={href}
                 onClick={() => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })}
@@ -27,7 +27,7 @@ export default function Footer() {
               >
                 {href.slice(1)}
               </button>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
