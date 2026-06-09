@@ -1,11 +1,5 @@
 import { useState, useEffect } from 'react';
 
-
-interface NavbarProps {
-  isDark: boolean;
-  toggleTheme: () => void;
-}
-
 const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
@@ -16,7 +10,7 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar(){
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,13 +36,13 @@ export default function Navbar(){
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
           <button
             onClick={() => handleNavClick('#hero')}
-            className="flex items-center gap-2 font-mono font-bold text-brand-400 hover:text-brand-300 transition-colors"
+            className="font-mono font-bold text-brand-400 hover:text-brand-300 transition-colors text-sm"
           >
-            
-            <span className="text-sm">Faruk Badsha </span>
+            Faruk Badsha
           </button>
 
           {/* Desktop Links */}
@@ -64,25 +58,15 @@ export default function Navbar(){
             ))}
           </div>
 
-          {/* Actions */}
-          
-          <div className="flex items-center gap-2">
-            {/* <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all duration-200"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? '✕' : '☰'}
+          </button>
 
-            <button
-              className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button> */}
-          </div>
         </div>
       </div>
 
