@@ -1,6 +1,7 @@
+
 // import { useState } from 'react';
 // import toast from 'react-hot-toast';
-// import { Send, Github, Linkedin, Facebook, Download } from 'lucide-react';
+// import { Send, Github, Linkedin, Download } from 'lucide-react';
 
 // export default function Contact() {
 //   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -9,13 +10,13 @@
 //   const handleSubmit = async (e: React.FormEvent) => {
 //     e.preventDefault();
 //     if (!form.name || !form.email || !form.message) {
-//       toast.error('সব ফিল্ড পূরণ করুন!');
+//       toast.error('Please fill in all fields.');
 //       return;
 //     }
 //     setLoading(true);
-//     await new Promise((res) => setTimeout(res, 1200)); // simulate
+//     await new Promise((res) => setTimeout(res, 1200));
 //     setLoading(false);
-//     toast.success('Thanks for reaching out! 🎉 আমি শীঘ্রই যোগাযোগ করব।');
+//     toast.success('Thanks for reaching out! I will get back to you soon.');
 //     setForm({ name: '', email: '', message: '' });
 //   };
 
@@ -24,16 +25,16 @@
 //       <div className="text-center mb-14">
 //         <div className="section-divider mx-auto" />
 //         <h2 className="section-heading">Let's Connect</h2>
-//         <p className="section-subheading">নতুন সুযোগ বা কোলাবরেশনের জন্য যোগাযোগ করুন</p>
+//         <p className="section-subheading">Open to new opportunities, collaborations, and freelance projects</p>
 //       </div>
 
 //       <div className="grid md:grid-cols-5 gap-8">
 //         {/* Form */}
 //         <div className="md:col-span-3 card">
-//           <h3 className="font-bold text-white text-lg mb-6">বার্তা পাঠান</h3>
+//           <h3 className="font-bold text-white text-lg mb-6">Send a Message</h3>
 //           <form onSubmit={handleSubmit} className="space-y-4">
 //             <div>
-//               <label className="block text-slate-400 text-sm mb-2">আপনার নাম</label>
+//               <label className="block text-slate-400 text-sm mb-2">Your Name</label>
 //               <input
 //                 type="text"
 //                 placeholder="John Doe"
@@ -43,7 +44,7 @@
 //               />
 //             </div>
 //             <div>
-//               <label className="block text-slate-400 text-sm mb-2">ইমেইল</label>
+//               <label className="block text-slate-400 text-sm mb-2">Email Address</label>
 //               <input
 //                 type="email"
 //                 placeholder="john@example.com"
@@ -53,10 +54,10 @@
 //               />
 //             </div>
 //             <div>
-//               <label className="block text-slate-400 text-sm mb-2">মেসেজ</label>
+//               <label className="block text-slate-400 text-sm mb-2">Message</label>
 //               <textarea
 //                 rows={5}
-//                 placeholder="আপনার মেসেজ লিখুন..."
+//                 placeholder="Tell me about your project or opportunity..."
 //                 value={form.message}
 //                 onChange={(e) => setForm({ ...form, message: e.target.value })}
 //                 className="input-field resize-none"
@@ -70,12 +71,12 @@
 //               {loading ? (
 //                 <>
 //                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-//                   পাঠানো হচ্ছে...
+//                   Sending...
 //                 </>
 //               ) : (
 //                 <>
 //                   <Send size={16} />
-//                   বার্তা পাঠান
+//                   Send Message
 //                 </>
 //               )}
 //             </button>
@@ -85,12 +86,21 @@
 //         {/* Info */}
 //         <div className="md:col-span-2 space-y-5">
 //           <div className="card">
-//             <h3 className="font-bold text-white text-base mb-4">সোশ্যাল লিংক</h3>
+//             <h3 className="font-bold text-white text-base mb-4">Social Links</h3>
 //             <div className="space-y-3">
 //               {[
-//                 { icon: Github, label: 'GitHub', href: 'https://github.com/yourusername', sub: '@yourusername' },
-//                 { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', sub: 'Connect with me' },
-//                 { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/yourprofile', sub: 'Follow me' },
+//                 {
+//                   icon: Github,
+//                   label: 'GitHub',
+//                   href: 'https://github.com/FarukBadsha0186',
+//                   sub: '@FarukBadsha0186',
+//                 },
+//                 {
+//                   icon: Linkedin,
+//                   label: 'LinkedIn',
+//                   href: 'https://www.linkedin.com/in/faruk-badsha-bb7401211?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5zc%2FCPtASnKTFcwMB7hYbQ%3D%3D',
+//                   sub: 'faruk-badsha-bb7401211',
+//                 },
 //               ].map(({ icon: Icon, label, href, sub }) => (
 //                 <a
 //                   key={label}
@@ -112,9 +122,9 @@
 //           </div>
 
 //           <div className="card">
-//             <h3 className="font-bold text-white text-base mb-4">রেজিউম ডাউনলোড</h3>
+//             <h3 className="font-bold text-white text-base mb-4">Resume</h3>
 //             <p className="text-slate-400 text-sm mb-4">
-//               আমার সম্পূর্ণ CV ডাউনলোড করুন — Skills, Experience, Projects সব।
+//               Download my full CV — skills, experience, and projects all in one place.
 //             </p>
 //             <a
 //               href="/resume.pdf"
@@ -122,7 +132,7 @@
 //               className="btn-primary w-full flex items-center justify-center gap-2"
 //             >
 //               <Download size={16} />
-//               Resume.pdf ডাউনলোড
+//               Download Resume
 //             </a>
 //           </div>
 
@@ -131,15 +141,20 @@
 //               <div className="w-2 h-2 bg-brand-400 rounded-full animate-pulse" />
 //               <span className="text-brand-300 font-semibold text-sm">Open to Work</span>
 //             </div>
-//             <p className="text-slate-400 text-xs">Remote অথবা Dhaka/Chittagong-এ অফিস জবের জন্য অ্যাভেইলেবল আছি।</p>
+//             <p className="text-slate-400 text-xs">
+//               Available for remote roles and on-site positions in Dhaka & Chittagong, Bangladesh.
+//             </p>
 //           </div>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // }
+
+
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 import { Send, Github, Linkedin, Download } from 'lucide-react';
 
 export default function Contact() {
@@ -148,15 +163,34 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!form.name || !form.email || !form.message) {
       toast.error('Please fill in all fields.');
       return;
     }
+
     setLoading(true);
-    await new Promise((res) => setTimeout(res, 1200));
-    setLoading(false);
-    toast.success('Thanks for reaching out! I will get back to you soon.');
-    setForm({ name: '', email: '', message: '' });
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success('Thanks for reaching out! I will get back to you soon.');
+      setForm({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast.error('Something went wrong. Please try again or email me directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -237,7 +271,7 @@ export default function Contact() {
                 {
                   icon: Linkedin,
                   label: 'LinkedIn',
-                  href: 'https://www.linkedin.com/in/faruk-badsha-bb7401211?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5zc%2FCPtASnKTFcwMB7hYbQ%3D%3D',
+                  href: 'https://www.linkedin.com/in/faruk-badsha-bb7401211',
                   sub: 'faruk-badsha-bb7401211',
                 },
               ].map(({ icon: Icon, label, href, sub }) => (
